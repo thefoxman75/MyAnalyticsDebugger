@@ -1,12 +1,12 @@
 # Privacy Policy for My Analytics Debugger
 
-**Effective date:** November 2, 2026
+**Effective date:** November 3, 2026
 
 My Analytics Debugger ("MAD") is a browser developer-tools extension for inspecting Adobe Web SDK and Classic Adobe Analytics requests. This policy explains what information MAD processes, how it is used, and how it is protected.
 
 ## Information MAD processes
 
-When Chrome or Microsoft Edge DevTools is open, MAD uses the browser's DevTools APIs to inspect network requests from the tab being actively inspected. MAD limits its request processing to Adobe Web SDK and Classic Adobe Analytics requests needed to provide its debugging features.
+In DevTools mode, MAD uses the browser's DevTools APIs to inspect network requests from the tab being actively inspected. When the user explicitly enables standalone multi-tab capture, MAD uses the browser's read-only web request API to inspect supported analytics requests from browser tabs while the standalone MAD window is open. MAD limits its request processing to Adobe Web SDK and Classic Adobe Analytics requests needed to provide its debugging features.
 
 The information made available through those requests may include:
 
@@ -35,7 +35,7 @@ MAD uses `chrome.storage.local` to save extension preferences on the user's devi
 
 MAD does not use these settings for tracking or advertising. Locally stored preferences remain until the user clears them, removes the extension, or clears the extension's browser storage.
 
-Analytics request data shown in the MAD DevTools panel is held only for the active DevTools session and is not saved by MAD as persistent extension storage.
+Analytics request data shown by MAD is held only in memory for the active DevTools panel or standalone capture window and is not saved by MAD as persistent extension storage.
 
 ## Exports
 
@@ -47,15 +47,15 @@ MAD does not sell, rent, share, or transfer user data to third parties. MAD cont
 
 ## Permissions
 
-MAD requests the `storage` permission solely to retain the local preferences described above. It does not request host permissions, access to browsing history, or unlimited storage.
+MAD requests the `storage` permission solely to retain the local preferences described above. Standalone multi-tab capture additionally requests optional `webRequest` and website access only after the user chooses to enable it. This optional access is used only to observe supported analytics requests while the standalone MAD window is open and can be removed from MAD's settings. MAD does not modify or block requests and does not request unlimited storage. Users who decline this access can continue using the DevTools panel.
 
 ## Data security
 
-MAD minimizes data access by operating only while DevTools is open and by processing relevant analytics requests locally. Because request data can reflect information supplied by the inspected website, users should take care when exporting or sharing debugging output.
+MAD minimizes data access by operating only while DevTools or the standalone capture window is open and by processing relevant analytics requests locally. Because request data can reflect information supplied by the inspected website, users should take care when exporting or sharing debugging output.
 
-## Chrome Web Store Limited Use disclosure
+## Browser extension limited-use disclosure
 
-MAD's use of information received from browser APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide and improve MAD's single-purpose analytics-debugging functionality. It is not used for advertising, profiling, creditworthiness, or any unrelated purpose, and is not made available for human review by the developer.
+MAD's use of information received from browser APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements, and the Microsoft Edge Add-ons developer policies. Information is used only to provide MAD's single-purpose analytics-debugging functionality. It is not used for advertising, profiling, creditworthiness, or any unrelated purpose, and is not made available for human review by the developer.
 
 ## Children's privacy
 
